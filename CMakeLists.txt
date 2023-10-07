@@ -21,6 +21,8 @@ set_target_properties(logc_shared PROPERTIES
     PUBLIC_HEADER "${PUBLIC_HEADERS}"
 )
 
+target_compile_definitions(logc PRIVATE LOG_USE_COLOR)
+
 install(TARGETS logc_shared
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
